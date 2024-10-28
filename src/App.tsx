@@ -8,6 +8,13 @@ const array2 = ['d', 'e', 'f'];
 const array3 = array1.concat(array2);
 
 console.log(array3);
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+
 
   return (
     <div className="App">
