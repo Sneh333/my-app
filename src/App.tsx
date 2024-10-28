@@ -3,6 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+const array1 = ['a', 'b', 'c'];
+const array2 = ['d', 'e', 'f'];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -16,7 +22,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React!!
+          Learn React!!!
         </a>
       </header>
     </div>
