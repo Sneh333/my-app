@@ -1,38 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import logo from "./logo.svg";
+import { useState } from "react";
+import "./App.css";
+import Parent from "./Parent";
 
 function App() {
-const array1 = ['a', 'b', 'c'];
-const array2 = ['d', 'e', 'f'];
-const array3 = array1.concat(array2);
+  const array1 = ["a", "b", "c"];
+  const array2 = ["d", "e", "f"];
+  const array3 = array1.concat(array2);
 
-console.log(array3);
-const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+  console.log(array3);
+  const words = ["spray", "elite", "exuberant", "destruction", "present"];
 
-const result = words.filter((word) => word.length > 6);
+  const result = words.filter((word) => word.length > 6);
 
-console.log(result);
-// Expected output: Array ["exuberant", "destruction", "present"]
-
-
+  console.log(result);
+  // Expected output: Array ["exuberant", "destruction", "present"]
+  const [propsval, setPropsval] = useState(10);
+  console.log(propsval);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React!!!
-        </a>
-      </header>
-    </div>
+    <>
+      <p>Apps Props Value {propsval}</p>
+      <Parent values={propsval} componentName="Calling from Apps" />
+    </>
   );
 }
 
